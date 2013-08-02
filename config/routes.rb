@@ -1,4 +1,9 @@
 Odb::Application.routes.draw do
+  get "opportunity/create"
+  get "opportunity/destroy"
+  get "opportunity/index"
+  get "opportunity/show"
+  get "static/home"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
