@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130803142828) do
+ActiveRecord::Schema.define(version: 20130803194342) do
 
   create_table "opportunities", force: true do |t|
     t.string   "position"
@@ -19,12 +19,12 @@ ActiveRecord::Schema.define(version: 20130803142828) do
     t.string   "location"
     t.integer  "salary"
     t.string   "contact"
-    t.string   "link"
+    t.text     "link",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "track"
     t.integer  "user_id"
-    t.string   "notes"
+    t.text     "notes",      limit: 255
   end
 
   create_table "providers", force: true do |t|
