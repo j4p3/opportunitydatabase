@@ -5,10 +5,12 @@
       <li class="active"><% link_to "Home", root_path %></li>
       <li><%= link_to "Share an Opportunity", new_opportunity_path %></li>
       <li><%= link_to "Find an Opportunity", opportunities_path %></li>
+      <li><%= link_to "Subscribe for Opportunities", "#" %></li>
     </ul>
     <% if current_user %>
     <ul class="nav navbar-nav pull-right">
         <li><img src=<%= current_user.img_url %>></li>
+        <li><%= link_to "Sign Out", signout_path, method: :delete %></li>
     </ul>
     <% end %>
   </div>

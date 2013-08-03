@@ -1,10 +1,12 @@
 <section class="panel opportunity show">
     <h1 class="panel-heading"><%= @opportunity.position %></h1>
     <ul>
+        <li><b>Track: </b><%= @opportunity.track %></li>
         <li><b>Company: </b><%= @opportunity.company %></li>
+        <li><b>Link: </b><%= @opportunity.link %></li>
         <li><b>Location: </b><%= @opportunity.location %></li>
         <li><b>Salary: </b><%= @opportunity.salary %></li>
         <li><b>Posted: </b><%= @opportunity.created_at %></li>
-        <li><b>Link: </b><%= @opportunity.link %></li>
+        <li><b>Posted By: </b><%= @user.name %></li>
     </ul>
 </div>

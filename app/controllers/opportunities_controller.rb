@@ -30,6 +30,7 @@ class OpportunitiesController < ApplicationController
 
   def show
     @opportunity = Opportunity.find(params[:id])
+    @user = User.find(@opportunity.user_id)
   end
 
   private

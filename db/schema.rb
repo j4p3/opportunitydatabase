@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130803132109) do
+ActiveRecord::Schema.define(version: 20130803141602) do
 
   create_table "opportunities", force: true do |t|
     t.string   "position"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20130803132109) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "track"
+    t.integer  "user_id"
   end
 
   create_table "providers", force: true do |t|

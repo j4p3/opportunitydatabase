@@ -7,7 +7,6 @@ class CreateOpportunities < ActiveRecord::Migration
       t.integer :salary
       t.string :contact
       t.string :link
-
       t.timestamps
     end
   end
