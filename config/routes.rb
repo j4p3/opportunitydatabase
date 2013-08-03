@@ -4,6 +4,7 @@ Odb::Application.routes.draw do
   match 'auth/:provider/callback', to: 'sessions#create', via: 'get'
   match 'auth/failure', to: redirect('/'), via: 'get'
   match '/signout', to: 'sessions#destroy', via: 'delete'
+  match '/subscribe', to: 'static#subscribe', via: 'get'
 
   # The priofoority is based upon order of creation:
   # first created -> highest priority.
