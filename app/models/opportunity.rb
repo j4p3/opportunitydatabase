@@ -3,8 +3,13 @@ class Opportunity < ActiveRecord::Base
     default_scope -> { order('created_at DESC') }
 
     before_save {
-        self.track.downcase!
-        self.location.downcase!
+        self.track ? self.track.downcase! : self.track = ''
+        self.location ? self.location.downcase! : self.track = ''
+        self.position ? self.position : self.position = ''
+        self.salary ? self.salary : self.salary = 0
+        self.company ? self.company : self.company = ''
+        self.link ? self.link : self.link = ''
+        self.user_id ? self.user_id : self.user_id = 1
     }
 
 
@@ -13,7 +18,7 @@ class Opportunity < ActiveRecord::Base
     validates :company, presence: :true
     validates :location, presence: :true
     validates :track, presence: :true
-    validates :salary, numericality: true
+    # validates :salary, numericality: true
 
     scope :track, lambda { |track| where(track: track.downcase) }
     scope :city, lambda { |city| where(location: city.downcase) }
