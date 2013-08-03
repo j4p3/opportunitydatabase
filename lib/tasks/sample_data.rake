@@ -24,26 +24,26 @@ namespace :db do
             company = Faker::Company.name
             contact = Faker::Name.name
             link = Faker::Internet.url
-            salary = Faker::Number.number(5)
+            salary = Faker::Number.number(4)
 
             case user.id % 4
             when 0
-                track = "dev"
+                track = "Dev"
             when 1
-                track = "marketing"
+                track = "Marketing"
             when 2
-                track = "sales"
+                track = "Sales"
             when 3
-                track = "product"
+                track = "Product"
             end
 
             case user.id % 3
             when 0
-                location = "nyc"
+                location = "New York City"
             when 1
-                location = "bos"
+                location = "Boston"
             when 2
-                location = "chi"
+                location = "Chicago"
             end
 
             user.opportunities.create!(position: position,

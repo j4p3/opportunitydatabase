@@ -7,16 +7,32 @@
             <%= f.text_field :position, {class: "form-control input-large", placeholder: "No ninjas or rockstars allowed."} %>
         </div>
         <div class="input-group">
-            <span class="input-group-addon">Track</span>
-            <%= f.text_field :track, {class: "form-control", placeholder: "Suitable for ... dev, marketing, etc"} %>
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Track <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#" data-content="Dev" onclick="$('#track').val('Dev');">Dev</a></li>
+                    <li><a href="#" data-content="Sales" onclick="$('#track').val('Sales');">Sales</a></li>
+                    <li><a href="#" data-content="Product" onclick="$('#track').val('Product');">Product</a></li>
+                    <li><a href="#" data-content="Marketing" onclick="$('#track').val('Marketing');">Marketing</a></li>
+                </ul>
+            </div>
+            <%= f.text_field :track, {class: "form-control", placeholder: "<- please use the button :)", id: "track"} %>
         </div>
         <div class="input-group">
             <span class="input-group-addon">Company</span>
             <%= f.text_field :company, {class: "form-control", placeholder: "Name of Company"} %>
         </div>
         <div class="input-group">
-            <span class="input-group-addon">Location</span>
-            <%= f.text_field :location, {class: "form-control", placeholder: "Preferably a SI city"} %>
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">City <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#" data-content="Boston" onclick="$('#city').val('Boston');">Boston</a></li>
+                    <li><a href="#" data-content="New York City" onclick="$('#city').val('New York City');">New York</a></li>
+                    <li><a href="#" data-content="Chicago" onclick="$('#city').val('Chicago');">Chicago</a></li>
+                    <li><a href="#" data-content="Any" onclick="$('#city').val('Any');">Other</a></li>
+                </ul>
+            </div>
+            <%= f.text_field :location, {class: "form-control", placeholder: "<- please use the button :)", id: 'city'} %>
         </div>
         <div class="input-group">
             <span class="input-group-addon">Salary</span>
@@ -29,6 +45,10 @@
         <div class="input-group">
             <span class="input-group-addon">Link</span>
             <%= f.text_field :link, {class: "form-control", placeholder: "http://company-name.com/jobs"} %>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon">Notes</span>
+            <%= f.text_field :link, {class: "form-control", placeholder: "Anything else about this opportunity?"} %>
         </div>
 
         <%= f.submit "Post Opportunity", class: "btn btn-large btn-primary" %>

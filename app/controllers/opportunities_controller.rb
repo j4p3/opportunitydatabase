@@ -9,6 +9,7 @@ class OpportunitiesController < ApplicationController
 
   def create
     @opportunity = Opportunity.create(opportunity_params)
+    @opportunity.user_id = current_user.id
     if @opportunity.save
       flash[:success] = "Thanks for sharing!"
       redirect_to @opportunity
@@ -17,14 +18,11 @@ class OpportunitiesController < ApplicationController
     end
   end
 
-  def destroy
-  end
-
   def index
     query = Opportunity.scoped
     query = query.track(params[:track]) if params[:track]
     query = query.city(params[:city]) if params[:city]
-    query = query.salary(params[:salary]) if params[:salary]
+    query = query.salary(params[:salary].to_i) if params[:salary]
     @opportunities = query.all
   end
 
@@ -36,5 +34,9 @@ class OpportunitiesController < ApplicationController
   private
     def opportunity_params
         params.require(:opportunity).permit(:position, :track, :company, :location, :salary, :contact, :link, :notes)
+    end
+
+    def current_user
+      @current_user ||= User.find(session[:user_id]) if session[:user_id]
     end
 end

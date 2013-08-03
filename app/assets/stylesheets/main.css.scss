@@ -20,7 +20,7 @@ section.opportunities {
     }
     &.new {
         .input-group { margin: 1em 0; }
-        .input-group-addon { min-width: 120px; }
+        .input-group-addon, .input-group-btn > button { min-width: 120px; }
     }
     .filters {
         margin-bottom: 1em;
