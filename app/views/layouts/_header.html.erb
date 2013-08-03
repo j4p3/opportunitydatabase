@@ -6,5 +6,10 @@
       <li><%= link_to "Share an Opportunity", new_opportunity_path %></li>
       <li><%= link_to "Find an Opportunity", opportunities_path %></li>
     </ul>
+    <% if current_user %>
+    <ul class="nav navbar-nav pull-right">
+        <li><img src=<%= current_user.img_url %>></li>
+    </ul>
+    <% end %>
   </div>
 </div>

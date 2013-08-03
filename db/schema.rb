@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130803051325) do
+ActiveRecord::Schema.define(version: 20130803132109) do
 
   create_table "opportunities", force: true do |t|
     t.string   "position"
@@ -23,6 +23,27 @@ ActiveRecord::Schema.define(version: 20130803051325) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "track"
+  end
+
+  create_table "providers", force: true do |t|
+    t.string   "uid"
+    t.string   "name"
+    t.string   "oath_token"
+    t.datetime "oath_expires_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "uid"
+    t.string   "name"
+    t.string   "email"
+    t.string   "img_url"
+    t.string   "oath_token"
+    t.datetime "oath_expires_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "provider"
   end
 
 end

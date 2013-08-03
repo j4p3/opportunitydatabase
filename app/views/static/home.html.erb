@@ -3,8 +3,12 @@
     <h1>Good morning, Startup Institute.</h1>
     <p>Spread that SI love.</p>
     <span>
-        <%= link_to "Share an Opportunity", new_opportunity_path, {class: "btn btn-primary btn-large"} %>
-        <%= link_to "Find an Opportunity", opportunities_path, {class: "btn btn-warning btn-large"} %>
+        <% if current_user %>
+            <%= link_to "Share an Opportunity", new_opportunity_path, {class: "btn btn-primary btn-large"} %>
+            <%= link_to "Find an Opportunity", opportunities_path, {class: "btn btn-warning btn-large"} %>
+        <% else %>
+            <%= link_to "Get Started", "/auth/facebook", {class: "uibutton confirm"}%>
+        <% end %>
     </span>
     </div>
 </section>
