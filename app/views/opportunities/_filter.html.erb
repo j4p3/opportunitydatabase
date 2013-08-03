@@ -1,0 +1,32 @@
+
+<section class="filters clearfix">
+    <div class="filter well">
+        <h4>Track:</h4>
+        <ul class="nav nav-pills">
+        <li class=<%= "active" if params[:track] == 'dev' %>><%= link_to 'Dev', opportunities_path(params.merge({track: 'dev'})) %></li>
+        <li class=<%= 'active' if params[:track] == 'sales' %> ><%= link_to 'Sales', opportunities_path(params.merge({track: 'sales'})) %></li>
+        <li class=<%= 'active' if params[:track] == 'marketing' %> ><%= link_to 'Marketing', opportunities_path(params.merge({track: 'marketing'})) %></li>
+        <li class=<%= 'active' if params[:track] == 'product' %> ><%= link_to 'Product', opportunities_path(params.merge({track: 'product'})) %></li>
+        <li class=<%= 'active' if params[:track] == nil %> ><%= link_to 'All', opportunities_path(params.merge({track: nil})) %></li>
+    </ul>
+    </div>
+    <div class="filter well">
+        <h4>City:</h4>
+        <ul class="nav nav-pills">
+            <li class=<%= 'active' if params[:city] == 'nyc' %> ><%= link_to 'NYC', opportunities_path(params.merge({city: 'nyc'})) %></li>
+            <li class=<%= 'active' if params[:city] == 'bos' %> ><%= link_to 'BOS', opportunities_path(params.merge({city: 'bos'})) %></li>
+            <li class=<%= 'active' if params[:city] == 'chi' %> ><%= link_to 'CHI', opportunities_path(params.merge({city: 'chi'})) %></li>
+            <li class=<%= 'active' if params[:city] == nil %> ><%= link_to 'All', opportunities_path(params.merge({city: nil})) %></li>
+        </ul>
+    </div>
+    <div class="filter well">
+        <h4>Salary:</h4>
+        <ul class="nav nav-pills">
+            <li class=<%= 'active' if params[:salary] == '30' %> ><%= link_to '>30', opportunities_path(params.merge({salary: 30})) %></li>
+            <li class=<%= 'active' if params[:salary] == '50' %> ><%= link_to '>50', opportunities_path(params.merge({salary: 50})) %></li>
+            <li class=<%= 'active' if params[:salary] == '70' %> ><%= link_to '>70', opportunities_path(params.merge({salary: 70})) %></li>
+            <li class=<%= 'active' if params[:salary] == '100' %> ><%= link_to '>100', opportunities_path(params.merge({salary: 100})) %></li>
+            <li class=<%= 'active' if params[:salary] == nil %> ><%= link_to 'All', opportunities_path(params.merge({salary: nil})) %></li>
+        </ul>
+    </div>
+</section>

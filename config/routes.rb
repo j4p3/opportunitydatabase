@@ -1,10 +1,11 @@
 Odb::Application.routes.draw do
-  get "opportunity/create"
-  get "opportunity/destroy"
-  get "opportunity/index"
-  get "opportunity/show"
-  get "static/home"
-  # The priority is based upon order of creation:
+  root to: 'static#home'
+  resources :opportunities, only: [:index, :create, :new, :show, :destroy]
+  # match 'auth/:provider/callback', to: 'sessions#create'
+  # match 'auth/failure', to: redirect('/')
+  # match 'signout', to: 'sessions#destroy', as 'signout'
+
+  # The priofoority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:

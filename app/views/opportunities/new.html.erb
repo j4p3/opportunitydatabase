@@ -1,0 +1,36 @@
+<section class="opportunities new">
+    <h1>Share an Opportunity</h1>
+    <%= form_for(@opportunity) do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+        <div class="input-group">
+            <span class="input-group-addon input-large">Position</span>
+            <%= f.text_field :position, {class: "form-control input-large", placeholder: "No ninjas or rockstars allowed."} %>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon">Track</span>
+            <%= f.text_field :track, {class: "form-control", placeholder: "Suitable for ... dev, marketing, etc"} %>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon">Company</span>
+            <%= f.text_field :company, {class: "form-control", placeholder: "Name of Company"} %>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon">Location</span>
+            <%= f.text_field :location, {class: "form-control", placeholder: "Preferably a SI city"} %>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon">Salary</span>
+            <%= f.text_field :salary, {class: "form-control", placeholder: "Lots of zeroes"} %>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon">Contact</span>
+            <%= f.text_field :contact, {class: "form-control", placeholder: "Who should the applicant get in touch with"} %>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon">Link</span>
+            <%= f.text_field :link, {class: "form-control", placeholder: "http://company-name.com/jobs"} %>
+        </div>
+
+        <%= f.submit "Post Opportunity", class: "btn btn-large btn-primary" %>
+    <% end %>
+</section>

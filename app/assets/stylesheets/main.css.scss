@@ -1,0 +1,35 @@
+body {
+    line-height: 1.5;
+}
+
+section.home {
+    .jumbotron {
+        text-align: center;
+        margin-top: 4em;
+        .btn { margin:2em; }
+    }
+}
+
+section.opportunities {
+    .opportunity {
+        li { display: inline; }
+    }
+    &.new {
+        .input-group { margin: 1em 0; }
+        .input-group-addon { min-width: 120px; }
+    }
+    .filters {
+        margin-bottom: 1em;
+        .filter {
+            max-width: 33%;
+            float: left;
+            margin-right: 1em;
+            .nav > li > a { padding: 7px 10px; }
+            &:last-child { margin-right: 0px; }
+            @media screen and (max-width: 768px) {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+    }
+}

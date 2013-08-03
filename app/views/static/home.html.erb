@@ -1,8 +1,10 @@
-<div class="jumbotron">
-<h1>Good morning, Startup Institute.</h1>
-<p>Spread the SI love to your alums.</p>
-<span>
-    <a class="btn btn-primary btn-large">Share an opportunity</a>
-    <a class="btn btn-warning btn-large">Find an opportunity</a>
-</span>
-</div>
+<section class="home">
+    <div class="jumbotron">
+    <h1>Good morning, Startup Institute.</h1>
+    <p>Spread that SI love.</p>
+    <span>
+        <%= link_to "Share an Opportunity", new_opportunity_path, {class: "btn btn-primary btn-large"} %>
+        <%= link_to "Find an Opportunity", opportunities_path, {class: "btn btn-warning btn-large"} %>
+    </span>
+    </div>
+</section>

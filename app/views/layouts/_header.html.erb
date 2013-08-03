@@ -1,8 +1,10 @@
 <div class="navbar">
-  <a class="navbar-brand" href="#">SI ODB</a>
-  <ul class="nav navbar-nav">
-    <li class="active"><a href="#">Home</a></li>
-    <li><a href="#">Share an opportunity</a></li>
-    <li><a href="#">Find an opportunity</a></li>
-  </ul>
+  <div class="container">
+    <%= link_to "SI ODB", root_path, {class: "navbar-brand"}%>
+    <ul class="nav navbar-nav">
+      <li class="active"><% link_to "Home", root_path %></li>
+      <li><%= link_to "Share an Opportunity", new_opportunity_path %></li>
+      <li><%= link_to "Find an Opportunity", opportunities_path %></li>
+    </ul>
+  </div>
 </div>

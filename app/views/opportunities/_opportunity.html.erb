@@ -1,0 +1,9 @@
+<%= link_to opportunity, {class: "list-group-item opportunity"} do %>
+    <h4 class="list-group-item-heading"><%= opportunity.position %></h4>
+    <ul class="list-group-item-text">
+        <li><%= opportunity.track %> - </li>
+        <li><%= opportunity.company %> - </li>
+        <li><%= opportunity.location %> - </li>
+        <li>$<%= opportunity.salary %></li>
+        </ul>
+<% end %>
