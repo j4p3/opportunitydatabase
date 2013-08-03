@@ -10,7 +10,9 @@ namespace :db do
         40.times do |n|
             name = Faker::Name.name
             email = "example-#{n+1}@foo.org"
-            user = User.create!(name: name, email: email, img_url: "http://placekitten.com/g/#{n%200}/#{n%100}")
+            url = Faker::Internet.url
+            img_url = "http://placekitten.com/g/#{n%200}/#{n%100}"
+            user = User.create!(name: name, email: email, url: url, img_url: img_url)
         end
     end
 
