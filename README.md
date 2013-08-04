@@ -3,11 +3,11 @@
 
 ##SETUP
 
-1 bundle install
-2 rake db:migrate
-3 rake import (the shitty loader script that seeds db with .csv downloaded from gdoc)
-4 contact me for FB credentials or [create get credentials from your own sandbox application](https://developers.facebook.com/apps)
-5 set FACEBOOK_KEY AND FACEBOOK_SECRET in shell.
+1. bundle install
+2. rake db:migrate
+3. rake import (the shitty loader script that seeds db with .csv downloaded from gdoc)
+4. contact me for FB credentials or [create get credentials from your own sandbox application](https://developers.facebook.com/apps)
+5. set FACEBOOK_KEY AND FACEBOOK_SECRET in shell.
 
 ##NEEDS
 
