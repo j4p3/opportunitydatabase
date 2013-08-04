@@ -50,8 +50,10 @@ section.opportunities {
 }
 
 footer {
+  position: absolute;
+  bottom: 0;
+  width:100%;
   margin-top: 45px;
-  padding-top: 5px;
   background: #eeeeee;
   border-top: 1px solid darken(#eeeeee, 10%);
   color: gray;
