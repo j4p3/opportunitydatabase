@@ -24,6 +24,11 @@ class OpportunitiesController < ApplicationController
     query = query.city(params[:city]) if params[:city]
     query = query.salary(params[:salary].to_i) if params[:salary]
     @opportunities = query.all
+
+    respond_to do |format|
+      format.html
+      format.json { render :json => @opportunities }
+    end
   end
 
   def show
