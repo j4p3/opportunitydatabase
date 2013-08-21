@@ -6,7 +6,4 @@
         <li><%= opportunity.location.titleize %> - </li>
         <li>$<%= opportunity.salary %></li>
     </ul>
-    <% if current_user?(opportunity.user_id) %>
-        <%= link_to "Edit", edit_opportunity_path(opportunity.id) %>
-    <% end %>
 <% end %>

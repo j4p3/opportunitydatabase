@@ -8,5 +8,10 @@
         <li><b>Salary: </b><%= @opportunity.salary %></li>
         <li><b>Posted: </b><%= @opportunity.created_at %></li>
         <li><b>Posted By: </b><%= link_to @user.name, @user.url %></li>
+        <% if current_user?(@opportunity.user_id) %>
+            <li>
+            <%= link_to "Edit", edit_opportunity_path(@opportunity.id) %>
+            </li>
+        <% end %>
     </ul>
 </div>
