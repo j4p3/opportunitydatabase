@@ -1,6 +1,6 @@
 Odb::Application.routes.draw do
   root to: 'static#home'
-  resources :opportunities, only: [:index, :create, :new, :show]
+  resources :opportunities
   match 'auth/:provider/callback', to: 'sessions#create', via: 'get'
   match 'auth/failure', to: redirect('/'), via: 'get'
   match '/signout', to: 'sessions#destroy', via: 'delete'

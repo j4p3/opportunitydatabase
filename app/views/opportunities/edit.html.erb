@@ -1,0 +1,31 @@
+<% provide(:title, "Edit opportunity") %> 
+<h1>Update your profile</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@opportunity) do |f| %>
+
+      <%= f.label :position %>
+      <%= f.text_field :position %>
+
+      <%= f.label :company %>
+      <%= f.text_field :company %>
+
+      <%= f.label :location %>
+      <%= f.text_field :location %>
+
+      <%= f.label :salary %>
+      <%= f.text_field :salary %>
+
+      <%= f.label :track %>
+      <%= f.text_field :track %>
+
+      <%= f.label :notes %>
+      <%= f.text_field :notes %>
+
+      <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+
+  <%= link_to "Delete Opportunity", @opportunity, method: :delete, class: "btn btn-warning btn-large" %>
+</div>
