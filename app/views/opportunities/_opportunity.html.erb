@@ -4,6 +4,16 @@
         <li><%= opportunity.track.titleize %> - </li>
         <li><%= opportunity.company %> - </li>
         <li><%= opportunity.location.titleize %> - </li>
-        <li>$<%= opportunity.salary %></li>
+        <li>
+          <% if opportunity.salary_low == opportunity.salary_high %>
+            <% if opportunity.salary_low == 0 %>
+              Salary not provided
+            <% else %>
+              $<%= opportunity.salary_low %>
+            <% end %>
+          <% else %>
+            $<%= opportunity.salary_low %> - $<%= opportunity.salary_high %>
+          <% end %>
+        </li>
     </ul>
 <% end %>

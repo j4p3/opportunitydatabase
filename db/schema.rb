@@ -11,29 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130803194342) do
+ActiveRecord::Schema.define(version: 20130822032808) do
 
   create_table "opportunities", force: true do |t|
     t.string   "position"
     t.string   "company"
     t.string   "location"
-    t.integer  "salary"
     t.string   "contact"
-    t.text     "link",       limit: 255
+    t.text     "link",        limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "track"
     t.integer  "user_id"
-    t.text     "notes",      limit: 255
-  end
-
-  create_table "providers", force: true do |t|
-    t.string   "uid"
-    t.string   "name"
-    t.string   "oath_token"
-    t.datetime "oath_expires_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.text     "notes",       limit: 255
+    t.integer  "salary_low"
+    t.integer  "salary_high"
   end
 
   create_table "users", force: true do |t|
