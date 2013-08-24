@@ -4,25 +4,34 @@
 <div class="row">
   <div class="span6 offset3">
     <%= form_for(@opportunity) do |f| %>
-
+    <div>
       <%= f.label :position %>
       <%= f.text_field :position %>
-
+      </div>
+      <div>
       <%= f.label :company %>
       <%= f.text_field :company %>
-
+      </div>
+      <div>
       <%= f.label :location %>
       <%= f.text_field :location %>
-
-      <%= f.label :salary %>
-      <%= f.text_field :salary %>
-
+      </div>
+      <div>
+      <%= f.label :salary_low %>
+      <%= f.text_field :salary_low %>
+      </div>
+      <div>
+      <%= f.label :salary_high %>
+      <%= f.text_field :salary_high %>
+      </div>
+      <div>
       <%= f.label :track %>
       <%= f.text_field :track %>
-
+      </div>
+      <div>
       <%= f.label :notes %>
       <%= f.text_field :notes %>
-
+      </div>
       <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
     <% end %>
   </div>
