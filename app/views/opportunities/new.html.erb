@@ -36,7 +36,11 @@
         </div>
         <div class="input-group">
             <span class="input-group-addon">Salary</span>
-            <%= f.text_field :salary, {class: "form-control", placeholder: "Plain integer, please."} %>
+            <%= f.text_field :salary_low, {class: "form-control", placeholder: "e.g. 45,000"} %>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon">Salary</span>
+            <%= f.text_field :salary_high, {class: "form-control", placeholder: "e.g. 55,000"} %>
         </div>
         <div class="input-group">
             <span class="input-group-addon">Contact</span>
