@@ -15,7 +15,7 @@ task import: [:environment] do
         # this crazy regex is super fragile, but is meant to deal with legacy csv data and also deal with salary ranges -_-
         array = string.gsub(/\s*[\$kK+]*,*/,'').split('-')
         return array = [0,0] if array.empty? # this handles cases of '', ' - ', etc.
-        array.map do |sal|
+        array.map! do |sal|
             (sal.to_i / 1000 > 1) ? sal.to_i : sal.to_i * 1000
         end
         array[1] = array[0] if array[1].nil?
