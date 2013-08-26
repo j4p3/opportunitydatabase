@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130822032808) do
+ActiveRecord::Schema.define(version: 20130826031901) do
 
   create_table "opportunities", force: true do |t|
     t.string   "position"
@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 20130822032808) do
     t.string   "track"
     t.integer  "user_id"
     t.text     "notes",       limit: 255
-    t.integer  "salary_low"
-    t.integer  "salary_high"
+    t.integer  "salary_low",              default: 0
+    t.integer  "salary_high",             default: 0
   end
 
   create_table "users", force: true do |t|
