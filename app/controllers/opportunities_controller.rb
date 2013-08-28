@@ -59,7 +59,7 @@ class OpportunitiesController < ApplicationController
 
   private
     def opportunity_params
-        params.require(:opportunity).permit(:position, :track, :company, :location, :salary, :contact, :link, :notes)
+        params.require(:opportunity).permit(:position, :track, :company, :location, :salary_low, :salary_high, :contact, :link, :notes)
     end
 
     def correct_user
